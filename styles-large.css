@@ -1,0 +1,82 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: hsl(240, 38%, 20%);
+}
+.slide {
+    height: 100vh;
+}
+.text {
+    float: left;
+    width: 60%;
+    z-index: 1;
+    position: relative;
+    font-weight: 200;
+    padding: 180px 0 0 180px;
+    background-image: url("images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: 240px 160px;
+    background-size: 80px 68px;
+
+}
+.image {
+    float: left;
+    width: 44%;
+    margin-left: -80px;
+    z-index: -1;
+    background-image: url("images/pattern-bg.svg");
+    background-position: center;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+
+}
+span.testimonial-author {
+    font-size: 14px;
+    font-weight: 700;
+
+}
+span.testimonial-role {
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: hsl(240, 18%, 77%);
+
+}
+.btns {
+    clear: both;
+    display: block;
+    position: relative;
+    bottom: 18%;
+    left: 60%;
+    background-color: #fff;
+    width: 80px;
+    border-radius: 1em;
+    padding: .4em .2em;
+
+}
+.btns .prev {
+    margin-right: 1em;
+    margin-left: .25em;
+
+}
+.btns a {
+    text-decoration: none;
+}
+img {
+    border-radius: 6px;
+    box-shadow: 20px 21px 39px -8px rgba(0,0,0,0.56);
+}
+.slider {
+    background-image: url(images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+}
