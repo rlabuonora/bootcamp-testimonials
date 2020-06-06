@@ -10,56 +10,71 @@
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
-         .attribution { clear: both; font-size: 11px; text-align: center; }
-         .attribution a { color: hsl(228, 45%, 44%); }
+          .attribution {
+              clear: both;
+              font-size: 11px;
+              text-align: center;
+              margin-top: 2em;
+
+          }
+          .attribution a {
+              color: hsl(228, 45%, 44%);
+
+          }
 
          /* - Dark Blue: hsl(240, 38%, 20%)
             - Grayish Blue: hsl(240, 18%, 77%) */
 
          body {
              font-family: Inter;
+             font-size: .8em;
              color: hsl(240, 38%, 20%);
          }
          .slide {
              background-image: url(images/pattern-curve.svg);
              background-repeat: no-repeat;
              background-position: bottom left;
-             padding: 1em 4em;
-             display: flex;
+             background-size: 350px 100px;
+             padding-bottom: 6em;
+             /* display: flex; */
          }
 
          aside {
              background-image: url(images/pattern-bg.svg);
-             padding: 3em 4em;
+             padding: 2em 2em 1em 9em;
              background-position: 50% 50%;
-             background-size: 100%;
+             background-size: contain;
              background-repeat: no-repeat;
-             margin-left: -4em;
-             z-index: -1;
+
+             /* margin-left: -4em; */
+             /* z-index: -1; */
+         }
+
+         aside img {
+             height: 250px;
+             width: 230px;
+
          }
 
          article {
              font-weight: 200;
              font-size: 1.4em;
-             padding: 4em 0 0 2em;
+             padding: 1em 3.8em;
+             text-align: center;
          }
 
-         article p {
-
-         }
-
-         .testimonial-author {
-             font-size: .8em;
+         article span {
+             display: block;
          }
 
          .testimonial-role {
              font-weight: 500;
-             font-size: .7em;
+             font-size: .9em;
              color: hsl(240, 18%, 77%);
          }
 
          .testimonial-author {
-             font-size: .8em;
+             font-size: .9em;
              font-weight: 500;
 
          }
@@ -71,7 +86,11 @@
     </head>
     <body>
 
-        <div class="slide">
+      <div class="slide">
+        <aside>
+              <img alt="Tanya's picture"
+                   src="images/image-tanya.jpg"/>
+          </aside>
           <article>
               <p>
               “ I’ve been interested in coding for a while but never taken the jump, until now.
@@ -82,12 +101,7 @@
                <span class="testimonial-role">UX Engineer</span>
              </div>
           </article>
-          <aside>
-              <img alt="Tanya's picture"
-                   height="410"
-                   width="400"
-                   src="images/image-tanya.jpg"/>
-          </aside>
+
         </div>
         <!-- <div class="slider">
              <div class="slide" id="slide-1">
