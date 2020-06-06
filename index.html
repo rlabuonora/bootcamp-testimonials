@@ -1,168 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+        <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-   .attribution { clear: both; font-size: 11px; text-align: center; }
-   .attribution a { color: hsl(228, 45%, 44%); }
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+         .attribution { clear: both; font-size: 11px; text-align: center; }
+         .attribution a { color: hsl(228, 45%, 44%); }
 
-   /* - Dark Blue: hsl(240, 38%, 20%)
-      - Grayish Blue: hsl(240, 18%, 77%) */
+         /* - Dark Blue: hsl(240, 38%, 20%)
+            - Grayish Blue: hsl(240, 18%, 77%) */
+         *,
+         ::before,
+         ::after {
+             box-sizing: border-box;
+         }
 
-   body {
-       margin: 0;
-       font-family: 'Inter', sans-serif;
-       font-size: 24px;
-       color: hsl(240, 38%, 20%);
-   }
+         body {
+             margin: 0;
+             font-family: 'Inter', sans-serif;
+             font-size: 24px;
+             color: hsl(240, 38%, 20%);
+         }
+         .slide {
+             height: 100vh;
+         }
+         .text {
+             float: left;
+             width: 60%;
+             z-index: 1;
+             position: relative;
+             font-weight: 200;
+             padding: 180px 0 0 180px;
+             background-image: url("images/pattern-quotes.svg");
+             background-repeat: no-repeat;
+             background-position: 240px 160px;
+             background-size: 80px 68px;
 
-   .slider {
-       height: 100vh;
-       background-image: url("images/pattern-curve.svg");
-       background-repeat: no-repeat;
-       background-position: left bottom;
-   }
+         }
+         .image {
+             float: left;
+             width: 44%;
+             margin-left: -80px;
+             z-index: -1;
+             background-image: url("images/pattern-bg.svg");
+             background-position: center;
+             background-size: 500px 500px;
+             background-repeat: no-repeat;
+             padding: 80px 0;
 
-   .slide {
-       padding: 0;
-       overflow: hidden;
-   }
-   .testimonial-text {
-       float: left;
-       width: 50%;
-       background-color: transparent;
-       margin: 40px 0 80px 120px;
+         }
+         span.testimonial-author {
+             font-size: 14px;
+             font-weight: 700;
 
-   }
-   .testimonial-text {
-       padding-top: 60px;
-       font-weight: 200;
-   }
+         }
+         span.testimonial-role {
+             font-size: 14px;
+             font-weight: 200;
+             margin-left: 10px;
+             color: hsl(240, 18%, 77%);
 
-   .testimonial-author {
-       font-size: 16px;
-       font-weight: 700;
-       margin-top: 40px;
+         }
+         .btns {
+             clear: both;
+             display: block;
+             position: relative;
+             bottom: 18%;
+             left: 60%;
+             background-color: #fff;
+             width: 80px;
+             border-radius: 1em;
+             padding: .4em .2em;
 
-   }
+         }
+         .btns .prev {
+             margin-right: 1em;
+             margin-left: .25em;
 
-   .testimonial-role {
-       margin-top: 0;
-       margin-left: 10px;
-       font-size: 16px;
-       font-weight: 500;
-       color: hsl(240, 18%, 77%);
-   }
+         }
+         .btns a {
+             text-decoration: none;
+         }
+         img {
+             border-radius: 6px;
+             box-shadow: 20px 21px 39px -8px rgba(0,0,0,0.56);
+         }
+         .slider {
+             background-image: url(images/pattern-curve.svg);
+             background-repeat: no-repeat;
+             background-position: left bottom;
+         }
 
 
-   .testimonial-text p span {
-       font-size: 16px;
-   }
-   .quote {
-       padding-top: 40px;
-       background-image: url("images/pattern-quotes.svg");
-       background-repeat: no-repeat;
-       background-size: 80px 60px;
-       background-position: 140px 0px;
-       margin-bottom: 0;
 
-   }
-   .img-bg {
-       margin-left: -60px;
-       position: absolute;
-       z-index: -1;
-       left: 50%;
-       float: right;
-       height: 600px;
-       width: 600px;
-       background-size: 420px 420px, 500px 500px;
-       background-image:
-           url("images/image-tanya.jpg"),
-           url("images/pattern-bg.svg");
-       background-repeat: no-repeat;
-       background-position: center;
 
-   }
-   .btns {
-       display: inline-block;
-       background-color: #fff;
-       margin-top: 83vh;
-       border-radius: 40px;
-   }
-   .prev, .next {
-       display: inline-block;
-       clear: both;
-       width: 40px;
-       
-   
-   }
-   
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet" type="text" />
 
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slide" id="slide-1">
+                <div class="text">
 
-</head>
-<body>
-    <div class="slider">
-        <div class="slide" id="slide-1">
-            <div class="testimonial-text">
+                    <p class="quote">
+                        “ I’ve been interested in coding for a while but never taken the jump, until now.
+                        I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+                        excited about the future. ”
+                    </p>
 
-                <p class="quote">
-                “ I’ve been interested in coding for a while but never taken the jump, until now.
-                I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-                excited about the future. ”
-                </p>
-
-                <p class="testimonial-author">
-                    <span class="testimonial-author">Tanya Sinclair</span>
-                    <span class="testimonial-role">UX Engineer</span>
-                </p>
-            </div>
-            <div class="img-bg">
-
-                <!-- <img alt="Tanya's picture" src="images/image-tanya.jpg"/> -->
-            </div>
-            <div class="btns">
-                <div class="prev">
-                    <a href="">
-                        <img alt="" src="images/icon-prev.svg"/> 
-                    </a>
-                    
+                    <p class="testimonial-author">
+                        <span class="testimonial-author">Tanya Sinclair</span>
+                        <span class="testimonial-role">UX Engineer</span>
+                    </p>
                 </div>
-                <div class="next">
+                <div class="image">
+                    <img alt="Tanya's picture" width=400 height=400 src="images/image-tanya.jpg"/>
+                </div>
+                <div class="btns">
                     <a href="">
-                        <img alt="" src="images/icon-next.svg"/>    
+                        <span class="prev">
+                            <img alt="" src="images/icon-prev.svg"/>
+                        </span>
                     </a>
-                    
+                    <a href="">
+                        <span class="next">
+                            <img alt="" src="images/icon-next.svg"/>
+                        </span>
+                    </a>
                 </div>
             </div>
+            <!-- <div class="slide" id="slide-2">
+                 <p class="testimonial-text">
+                 “ If you want to lay the best foundation possible I’d recommend taking this course.
+                 The depth the instructors go into is incredible. I now feel so confident about
+                 starting up as a professional developer. ”
+                 </p>
+                 <p class="testimonial-author">John Tarkpor</p>
+                 <p class="testimonial-role">Junior Front-end Developer</p>
+                 <img alt="John's picture" src="images/image-john.jpg"/>
+                 </div> -->
+
 
         </div>
-        <!-- <div class="slide" id="slide-2">
-             <p class="testimonial-text">
-             “ If you want to lay the best foundation possible I’d recommend taking this course.
-             The depth the instructors go into is incredible. I now feel so confident about
-             starting up as a professional developer. ”
-             </p>
-             <p class="testimonial-author">John Tarkpor</p>
-             <p class="testimonial-role">Junior Front-end Developer</p>
-             <img alt="John's picture" src="images/image-john.jpg"/>
-             </div> -->
 
 
-    </div>
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="www.rlabuonora.com">Rafael La Buonora</a>.
-  </div>
-</body>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="www.rlabuonora.com">Rafael La Buonora</a>.
+        </div>
+    </body>
 </html>
