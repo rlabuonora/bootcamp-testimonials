@@ -9,109 +9,9 @@
         <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-         .attribution {
-             clear: both;
-             font-size: 11px;
-             text-align: center;
-             margin-top: 2em;
 
-         }
-         .attribution a {
-             color: hsl(228, 45%, 44%);
-
-         }
-
-         /* - Dark Blue: hsl(240, 38%, 20%)
-            - Grayish Blue: hsl(240, 18%, 77%) */
-
-         body {
-             font-family: Inter;
-             font-size: .8em;
-             color: hsl(240, 38%, 20%);
-         }
-         .slide {
-             background-image: url(images/pattern-curve.svg);
-             background-repeat: no-repeat;
-             background-position: bottom left;
-             background-size: 350px 100px;
-             padding-bottom: 6em;
-             display: block;
-         }
-
-         @media (min-width: 680px) {
-
-             .slide {
-                 display: flex;
-                 padding: 1em 8em;
-             }
-
-         }
-
-         aside {
-             background-image: url(images/pattern-bg.svg);
-             padding: 2em 1em;
-             background-position: 50% 50%;
-             background-size: contain;
-             background-repeat: no-repeat;
-             margin-left: -4em;
-             z-index: -1;
-         }
-
-         @media (min-width: 680px) {
-
-             aside {
-                 order: 2;
-                 padding: 3em 4em;
-             }
-             
-         }
-
-         
-         aside img {
-             display: block;
-             height: 250px;
-             width: 230px;
-             margin: 0 auto;
-         }
-
-         article {
-             font-weight: 200;
-             font-size: 1.4em;
-             padding: 1em 3.8em;
-             text-align: center;
-         }
-
-         article span {
-             display: block;
-         }
-
-         @media (min-width: 680px) {
-
-             article {
-                 padding: 4em 0 0 2em;
-             }
-             
-             article span {
-                 display: inline;
-             }
-         }
-
-         .testimonial-role {
-             font-weight: 500;
-             font-size: .9em;
-             color: hsl(240, 18%, 77%);
-         }
-
-         .testimonial-author {
-             font-size: .9em;
-             font-weight: 500;
-
-         }
-
-        </style>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap" rel="stylesheet">
-        <!-- <link href="styles.css" rel="stylesheet" type="text" /> -->
+        <link href="styles.css" rel="stylesheet" type="text/css" />
 
     </head>
     <body>
@@ -125,63 +25,64 @@
         </aside>
           <article>
               <p>
-              “ I’ve been interested in coding for a while but never taken the jump, until now.
+              “I’ve been interested in coding for a while but never taken the jump, until now.
                 I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-              excited about the future. ”</p>
+              excited about the future.”</p>
              <div class="testimonial-author">
                <span class="testimonial-author">Tanya Sinclair</span>
                <span class="testimonial-role">UX Engineer</span>
              </div>
           </article>
 
+      </div>
+      <!-- <div class="slider">
+           <div class="slide" id="slide-1">
+           <div class="text">
+
+           <p class="quote">
+           “ I’ve been interested in coding for a while but never taken the jump, until now.
+           I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+           excited about the future. ”
+           </p>
+
+           <p class="testimonial-author">
+           <span class="testimonial-author">Tanya Sinclair</span>
+           <span class="testimonial-role">UX Engineer</span>
+           </p>
+           </div>
+           <div class="image">
+           <img alt="Tanya's picture" width=400 height=400 src="images/image-tanya.jpg"/>
+           </div>
+           <div class="btns">
+           <a href="">
+           <span class="prev">
+           <img alt="" src="images/icon-prev.svg"/>
+           </span>
+           </a>
+           <a href="">
+           <span class="next">
+           <img alt="" src="images/icon-next.svg"/>
+           </span>
+           </a>
+           </div>
+           </div> -->
+      <!-- <div class="slide" id="slide-2">
+           <p class="testimonial-text">
+           “ If you want to lay the best foundation possible I’d recommend taking this course.
+           The depth the instructors go into is incredible. I now feel so confident about
+           starting up as a professional developer. ”
+           </p>
+           <p class="testimonial-author">John Tarkpor</p>
+           <p class="testimonial-role">Junior Front-end Developer</p>
+           <img alt="John's picture" src="images/image-john.jpg"/>
+           </div> -->
+      <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="www.rlabuonora.com">Rafael La Buonora</a>.
+      </div>
         </div>
-        <!-- <div class="slider">
-             <div class="slide" id="slide-1">
-             <div class="text">
-
-             <p class="quote">
-             “ I’ve been interested in coding for a while but never taken the jump, until now.
-             I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-             excited about the future. ”
-             </p>
-
-             <p class="testimonial-author">
-             <span class="testimonial-author">Tanya Sinclair</span>
-             <span class="testimonial-role">UX Engineer</span>
-             </p>
-             </div>
-             <div class="image">
-             <img alt="Tanya's picture" width=400 height=400 src="images/image-tanya.jpg"/>
-             </div>
-             <div class="btns">
-             <a href="">
-             <span class="prev">
-             <img alt="" src="images/icon-prev.svg"/>
-             </span>
-             </a>
-             <a href="">
-             <span class="next">
-             <img alt="" src="images/icon-next.svg"/>
-             </span>
-             </a>
-             </div>
-             </div> -->
-            <!-- <div class="slide" id="slide-2">
-                 <p class="testimonial-text">
-                 “ If you want to lay the best foundation possible I’d recommend taking this course.
-                 The depth the instructors go into is incredible. I now feel so confident about
-                 starting up as a professional developer. ”
-                 </p>
-                 <p class="testimonial-author">John Tarkpor</p>
-                 <p class="testimonial-role">Junior Front-end Developer</p>
-                 <img alt="John's picture" src="images/image-john.jpg"/>
-                 </div> -->
-        </div>
 
 
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="www.rlabuonora.com">Rafael La Buonora</a>.
-        </div>
+
     </body>
 </html>
