@@ -46,7 +46,7 @@
               </div>
               <nav>
                   <button class="previous">previous</button>
-                  <button class="next">next</button>
+                  <button id="next" class="next">next</button>
                   
               </nav>
           </aside>
@@ -72,16 +72,22 @@
 
         <script type="text/javascript">
          (function () {
-             const next_buttons = document.querySelectorAll('.btn')
-             buttons.forEach(function(currentBtn){
-                 currentBtn.addEventListener('click', handleEvent)
+
+             var foo = function() {
+                 alert("foo");
+             }
+
+             const next_buttons = document.querySelectorAll('.next')
+             next_buttons.forEach(function(currentBtn){
+                 currentBtn.addEventListener('click', foo);
              })
-             var button = document.getElementById('toggle-menu');
-             button.addEventListener('click', function(event) {
-                 event.preventDefault();
-                 var menu = document.getElementById('main-menu');
-                 menu.classList.toggle('is-open');
-             }); })();
+
+             const btn  = document.getElementById("next");
+             btn.addEventListener('click', function(e) {
+                 alert('foo');
+             });
+             
+         })();
         </script>
     </body>
 </html>

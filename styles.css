@@ -3,14 +3,21 @@ body {
     font-family: Inter;
     font-size: .8em;
     color: hsl(240, 38%, 20%);
+    min-height: 800px;
+}
+
+#slide-1 {
+    display: none;
 }
 .slide {
     background-image: url(images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 350px 100px;
+    padding-top: 2em;
     display: block;
     height: 100vh;
+
 }
 
 @media (min-width: 1020px) {
@@ -23,6 +30,7 @@ body {
 }
 
 aside {
+    position: relative;
     background-image: url(images/pattern-bg.svg);
     padding: 2em 1em;
     background-position: 50% 50%;
@@ -40,13 +48,15 @@ aside img {
     height: 250px;
     width: 230px;
     margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 26px 26px -6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 1020px) {
 
     aside {
         order: 2;
-        padding: 8em 4em 2em 4em;
+        padding: 7em 4em 2em 4em;
     }
 
     aside img {
@@ -55,7 +65,6 @@ aside img {
     }
 
 }
-
 article {
     font-weight: 200;
     font-size: 1.4em;
@@ -93,10 +102,67 @@ article span {
 
 }
 
+button {
+
+    background-color: #fff;
+    text-indent: 10em;
+    overflow: hidden;
+    width: 4.2em;
+    height: 3.2em;
+    border: 0;
+    border-radius: 2em;
+    position: relative;
+    left: calc(50% - 4em);
+    bottom: 1.6em;
+
+}
+
+button:first-of-type {
+    margin-right: -1.4em;
+}
+button + button {
+    margin-left: -1.4em;
+}
+
+@media (min-width: 1020px) {
+
+    button {
+        bottom: 1.8em;
+        left: 4em;
+        width: 5em;
+        height: 4em;
+    }
+    button:first-of-type {
+        margin-right: -1.6em;
+    }
+    button + button {
+        margin-left: -1.6em;
+    }
+
+}
+
+
+.next {
+    background-image: url(images/icon-next.svg);
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    background-size: .6em;
+}
+
+.previous {
+    background-image: url(images/icon-prev.svg);
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+    background-size: .6em;
+}
+
+button .next {
+
+}
 
 .attribution {
     position: relative;
-    bottom: 3em;
+    bottom: 4em;
     font-size: 11px;
     text-align: center;
 
