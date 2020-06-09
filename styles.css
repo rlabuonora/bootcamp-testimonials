@@ -116,6 +116,14 @@ button {
 
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+button:active, button:focus {
+    outline: 2px solid hsl(240, 18%, 77%);
+}
+
 button + button {
     margin-left: -1em;
 }
