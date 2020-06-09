@@ -6,23 +6,23 @@ body {
     min-height: 800px;
 }
 
-#slide-1 {
-    display: none;
-}
 .slide {
     background-image: url(images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 350px 100px;
     padding-top: 2em;
-    display: block;
     height: 100vh;
 
 }
 
+.slide.visible {
+    display: block;
+}
+
 @media (min-width: 1020px) {
 
-    .slide {
+    .slide.visible {
         display: flex;
         padding: 0 8em 0 8em;
     }
@@ -37,7 +37,7 @@ aside {
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: -4em;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 
@@ -66,6 +66,7 @@ aside img {
 
 }
 article {
+    z-index: 10;
     font-weight: 200;
     font-size: 1.4em;
     padding: 1em 3.8em;
@@ -103,41 +104,32 @@ article span {
 }
 
 button {
-
     background-color: #fff;
     text-indent: 10em;
     overflow: hidden;
-    width: 4.2em;
+    width: 3em;
     height: 3.2em;
     border: 0;
-    border-radius: 2em;
     position: relative;
     left: calc(50% - 4em);
     bottom: 1.6em;
 
 }
 
-button:first-of-type {
-    margin-right: -1.4em;
-}
 button + button {
-    margin-left: -1.4em;
+    margin-left: -1em;
 }
+
 
 @media (min-width: 1020px) {
 
     button {
         bottom: 1.8em;
-        left: 4em;
-        width: 5em;
+        left: 3em;
+        width: 3.5em;
         height: 4em;
     }
-    button:first-of-type {
-        margin-right: -1.6em;
-    }
-    button + button {
-        margin-left: -1.6em;
-    }
+
 
 }
 
@@ -147,6 +139,7 @@ button + button {
     background-repeat: no-repeat;
     background-position: 70% 50%;
     background-size: .6em;
+    border-radius: 0 2em 2em 0;
 }
 
 .previous {
@@ -154,15 +147,12 @@ button + button {
     background-repeat: no-repeat;
     background-position: 30% 50%;
     background-size: .6em;
-}
-
-button .next {
-
+    border-radius: 2em 0 0 2em;
 }
 
 .attribution {
     position: relative;
-    bottom: 4em;
+    top: 2em;
     font-size: 11px;
     text-align: center;
 
@@ -170,5 +160,8 @@ button .next {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
 
+.slide {
+    display: none;
 }

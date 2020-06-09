@@ -15,7 +15,7 @@
     </head>
     <body>
 
-      <div class="slide" id="slide-1">
+      <div class="slide visible" id="slide-1">
         <aside>
             <div class="img">
                 <img alt="Tanya's picture"
@@ -46,7 +46,7 @@
               </div>
               <nav>
                   <button class="previous">previous</button>
-                  <button id="next" class="next">next</button>
+                  <button class="next">next</button>
                   
               </nav>
           </aside>
@@ -72,20 +72,25 @@
 
         <script type="text/javascript">
          (function () {
-
-             var foo = function() {
-                 alert("foo");
+             var n_slides = 2;
+             var current_slide = 1;
+             
+             var toggle_slide = function() {
+                 /* Solo funciona si hay dos slides! */
+                 var slides = document.querySelectorAll(".slide");
+                 slides.forEach(function(slide) {
+                     slide.classList.toggle("visible");
+                 })
+                 
+                 
              }
 
-             const next_buttons = document.querySelectorAll('.next')
-             next_buttons.forEach(function(currentBtn){
-                 currentBtn.addEventListener('click', foo);
+             var buttons = document.querySelectorAll(".previous, .next");
+             
+             buttons.forEach(function(currentBtn){
+                 currentBtn.addEventListener('click', toggle_slide);
              })
-
-             const btn  = document.getElementById("next");
-             btn.addEventListener('click', function(e) {
-                 alert('foo');
-             });
+             
              
          })();
         </script>
