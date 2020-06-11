@@ -124,17 +124,16 @@ button:active, button:focus {
     outline: 2px solid hsl(240, 18%, 77%);
 }
 
-button + button {
-    margin-left: -1em;
+nav {
+    font-size: 0;
 }
-
 
 @media (min-width: 1020px) {
 
     button {
         bottom: 1.8em;
         left: 3em;
-        width: 3.5em;
+        width: 3em;
         height: 4em;
     }
 
